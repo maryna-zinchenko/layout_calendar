@@ -1,0 +1,13 @@
+$block-width: 100px;
+$block-height: 100px;
+$gap: 1px;
+$weekdays: (
+  mon: 0,
+  tue: 1 * ($block-width + $gap),
+  wed: 2 * ($block-width + $gap),
+  thu: 3 * ($block-width + $gap),
+  fri: 4 * ($block-width + $gap),
+  sat: 5 * ($block-width + $gap),
+  sun: 6 * ($block-width + $gap),
+);
+$days-month: 28, 29, 30, 31;

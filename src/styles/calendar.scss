@@ -1,0 +1,8 @@
+.calendar {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: flex-start;
+  max-width: $block-width * 7 + $gap * 7;
+  margin: auto;
+  padding-top: 50px;
+}

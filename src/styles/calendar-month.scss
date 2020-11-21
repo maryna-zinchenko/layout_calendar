@@ -1,0 +1,32 @@
+@each $day in $days-month {
+  @for $i from 1 through $day {
+    .calendar-#{$day} div:nth-child(#{$i}) {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin-left: $gap;
+      margin-top: $gap;
+      flex-basis: $block-width;
+      height: $block-height;
+      background-color: #eee;
+      border: 1px solid black;
+      transition: background-color 0.5s, transform 0.5s;
+
+      &::before {
+        content: "#{$i}";
+      }
+
+      &:hover {
+        cursor: pointer;
+        background-color: pink;
+        transform: translate(0,-20px);
+      }
+    }
+  }
+}
+
+@each $a, $weekday in $weekdays {
+  .calendar-#{$a} div:first-child {
+    margin-left: $weekday + $gap;
+  }
+}
